@@ -17,13 +17,15 @@ class JuegoAdivinanza:
 
 # Uso del juego
 if __name__ == "__main__":
+    juego = JuegoAdivinanza(1, 100)
+
     print("Bienvenido al juego de adivinanza de números.")
     print("El número está entre 1 y 100.")
 
     while True:
         try:
             intento = int(input("Ingresa tu adivinanza: "))
-            resultado = JuegoAdivinanza(1, 100).adivinar(intento)
+            resultado = juego.adivinar(intento)
             print(resultado)
             print("*" * 50)  # Línea de asteriscos para separar visualmente cada intento :D
 
