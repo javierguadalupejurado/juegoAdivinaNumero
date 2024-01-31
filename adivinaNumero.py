@@ -9,9 +9,9 @@ class JuegoAdivinanza:
         self.intentos += 1
 
         if numero < self.numero_a_adivinar:
-            return "Demasiado bajo. Intenta de nuevo."
+            return f"Demasiado bajo. Intento #{self.intentos}. Intenta de nuevo."
         elif numero > self.numero_a_adivinar:
-            return "Demasiado alto. Intenta de nuevo."
+            return f"Demasiado alto. Intento #{self.intentos}. Intenta de nuevo."
         else:
             return f"¡Correcto! Has adivinado el número en {self.intentos} intentos."
 
@@ -32,3 +32,4 @@ if __name__ == "__main__":
                 break
         except ValueError:
             print("Por favor, ingresa un número entero válido.")
+
